@@ -4,7 +4,7 @@
   "description": "Evaluate a JavaScript expression on the command line",
   "main": "index.js",
   "bin": {
-    "require": "bin/require",
+    "require": "bin/require"
   },
   "author": "Jamie Hoeks <j@skeoh.com>",
   "license": "MIT",
