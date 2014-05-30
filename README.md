@@ -13,7 +13,7 @@ $ npm install --global git://github.com/j-/require-cli
 
 The binary `require` will now be available.
 
-### Node package
+### Node module
 
 ```bash
 $ npm install --save git://github.com/j-/require-cli
