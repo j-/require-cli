@@ -1,0 +1,12 @@
+{
+  "name": "require-cli",
+  "version": "0.0.0",
+  "description": "Evaluate a JavaScript expression on the command line",
+  "main": "index.js",
+  "bin": {
+    "require": "bin/require",
+  },
+  "author": "Jamie Hoeks <j@skeoh.com>",
+  "license": "MIT",
+  "preferGlobal": true
+}
