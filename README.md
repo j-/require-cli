@@ -26,7 +26,7 @@ The module can now be loaded with `require('require-cli')`.
 ### Command line
 
     Usage:
-        require <module> <expression>...
+        require <module> [<expression>...]
     
     Options:
         -h, --help      Show this screen

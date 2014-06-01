@@ -1,6 +1,6 @@
 var docs = [
 	'Usage:',
-	'    require <module> <expression>...',
+	'    require <module> [<expression>...]',
 	'',
 	'Options:',
 	'    -h, --help      Show this screen',
