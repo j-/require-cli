@@ -1,3 +1,19 @@
+var docs = [
+	'Usage:',
+	'    require <module> <expression>...',
+	'',
+	'Options:',
+	'    -h, --help      Show this screen',
+	'    -V, --version   Show version'
+].join('\n');
+
+var docopt = require('docopt').docopt;
+var options = {
+	help: true,
+	version: require('../package').version
+};
+var opts = docopt(docs, options);
+
 var path = require('path');
 var argv = process.argv.slice(2);
 var req = require('./require');
