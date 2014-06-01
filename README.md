@@ -25,7 +25,12 @@ The module can now be loaded with `require('require-cli')`.
 
 ### Command line
 
-    $ require <module> <expression>
+    Usage:
+        require <module> <expression>...
+    
+    Options:
+        -h, --help      Show this screen
+        -V, --version   Show version
 
 **module** can be:
 * a native module, like `path`, `http` etc., or
