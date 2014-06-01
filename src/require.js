@@ -42,7 +42,7 @@ exports.eval = function (modulePath, expression, cwd) {
 	module.filename = path.join(cwd, name);
 	module.paths = Module._nodeModulePaths(cwd);
 	if (!Module._contextLoad) {
-		var body = 'with(require(' + JSON.stringify(modulePath) + ')) {' + expression + '}';
+		var body = 'with(require(' + JSON.stringify(modulePath) + ')) { eval(' + JSON.stringify(expression) + '); }';
 		var script = [
 			'global.__filename = ' + JSON.stringify(name),
 			'global.exports = exports',
