@@ -8,6 +8,8 @@
     "eval",
     "cli"
   ],
+  "homepage": "https://github.com/j-/require-cli",
+  "bugs": "https://github.com/j-/require-cli/issues",
   "main": "index.js",
   "bin": {
     "require": "bin/require"
