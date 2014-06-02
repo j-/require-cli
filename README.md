@@ -52,6 +52,9 @@ win32
 
 $ require path sep
 \
+
+$ require ./package version
+1.2.3
 ```
 
 ### Node module
