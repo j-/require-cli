@@ -34,24 +34,29 @@
 exports.eval = function (modulePath, expression, cwd) {
 	var Module = require('module');
 	var path = require('path');
+	var name = '[eval]';
+	var module = new Module(name);
+	var jsonName = JSON.stringify(name);
+	var jsonModulePath = JSON.stringify(modulePath);
+	var jsonExpression = JSON.stringify(expression);
+	var script = 'with(require(' + jsonModulePath + ')) { eval(' + jsonExpression + '); }';
+	var body, jsonBody;
 	if (!cwd) {
 		cwd = process.cwd();
 	}
-	var name = '[eval]';
-	var module = new Module(name);
 	module.filename = path.join(cwd, name);
 	module.paths = Module._nodeModulePaths(cwd);
 	if (!Module._contextLoad) {
-		var body = 'with(require(' + JSON.stringify(modulePath) + ')) { eval(' + JSON.stringify(expression) + '); }';
-		var script = [
-			'global.__filename = ' + JSON.stringify(name),
+		body = script;
+		jsonBody = JSON.stringify(body);
+		script = [
+			'global.__filename = ' + jsonName,
 			'global.exports = exports',
 			'global.module = module',
 			'global.__dirname = __dirname',
 			'global.require = require',
-			'return require("vm").runInThisContext(' + JSON.stringify(body) + ', { filename: ' + JSON.stringify(name) + ' })'
+			'return require("vm").runInThisContext(' + jsonBody + ', { filename: ' + jsonName + ' })'
 		].join(';\n');
 	}
-	var result = module._compile(script, name + '-wrapper');
-	return result;
+	return module._compile(script, name + '-wrapper');
 };
