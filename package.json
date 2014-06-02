@@ -10,6 +10,10 @@
   ],
   "homepage": "https://github.com/j-/require-cli",
   "bugs": "https://github.com/j-/require-cli/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j-/require-cli.git"
+  },
   "main": "index.js",
   "bin": {
     "require": "bin/require"
