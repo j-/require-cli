@@ -8,7 +8,7 @@ Evaluate a JavaScript expression on the command line. Like `node -e` but loads a
 ### Command line
 
 ```bash
-$ npm install --global git://github.com/j-/require-cli
+$ npm install --global require-cli
 ```
 
 The binary `require` will now be available.
@@ -16,7 +16,7 @@ The binary `require` will now be available.
 ### Node module
 
 ```bash
-$ npm install --save git://github.com/j-/require-cli
+$ npm install --save require-cli
 ```
 
 The module can now be loaded with `require('require-cli')`.
